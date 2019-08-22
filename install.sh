@@ -58,10 +58,10 @@ else
   ## To install ZSH themes & aliases
   e_header "Copying ZSH themes & aliases..."
   e_note "Check .aliases file for more details."
-  cp oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
-  cp oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
-  cp oh-my-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme   ## Copy custom dracula theme
-  cp oh-my-zsh/z.sh ~/z.sh                                               ## Copy z.sh autocompletion file
+  ln -s oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
+  ln -s oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
+  ln -s oh-my-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme   ## Copy custom dracula theme
+  ln -s oh-my-zsh/z.sh ~/z.sh                                               ## Copy z.sh autocompletion file
   git clone https://github.com/peterhurford/git-it-on.zsh ~/.oh-my-zsh/custom/plugins/git-it-on ## Copy git it on utilities plugin
 fi
 
@@ -85,7 +85,7 @@ if test ! $(which nvm); then
   git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 
   ## To setup npm install/update -g without sudo
-  cp npmrc ~/.npmrc
+  ln -s  npmrc ~/.npmrc
   mkdir "${HOME}/.npm-packages"
   export PATH="$HOME/.node/bin:$PATH"
   sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
@@ -102,6 +102,8 @@ echo "Setting up macOS..."
   bash macOS.sh
 echo "Finished setting up macOS"
 
+## Mackup config
+ln -s mackup.cfg  ~/.npmrc
 
 ## Print installed node, npm version
 echo "node --version: $(node --version)"
