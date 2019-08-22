@@ -6,7 +6,7 @@ export CLICOLOR=true
 
 ## Set name of the theme to load.
 ## Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="dracula"
+ZSH_THEME="agnoster"
 
 ## oh-my-zsh plugins
 plugins=(git zsh-nvm npm git-it-on)
@@ -29,7 +29,11 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
 ## Setting vim as default editor
-export EDITOR="vim"
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='code --wait'
+ fi
 
 ## Postgres path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin

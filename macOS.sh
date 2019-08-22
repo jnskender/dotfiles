@@ -73,6 +73,8 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # Finder                                                                      #
 ###############################################################################
 
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
@@ -122,6 +124,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 # Auto hide menu bar
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
+# Show file extensions by default
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #

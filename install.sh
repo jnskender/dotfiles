@@ -97,6 +97,12 @@ else
   e_warning "NVM is already installed. Skipping.."
 fi
 
+## macOS Setup
+echo "Setting up macOS..."
+  bash macOS.sh
+echo "Finished setting up macOS"
+
+
 ## Print installed node, npm version
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
@@ -107,14 +113,6 @@ echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa
 eval "$(ssh-agent -s)"
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
 
-## Terminal & Dock setup
-#
-echo "Setting up macOS..."
-  bash macOS.sh
-echo "Finished setting up macOS"
-
-
-zsh
 echo "🍺  Thats all, Done. Note that some of these changes require a logout/restart to take effect."
 
 # END
