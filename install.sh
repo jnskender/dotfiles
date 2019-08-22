@@ -65,19 +65,17 @@ else
   git clone https://github.com/peterhurford/git-it-on.zsh ~/.oh-my-zsh/custom/plugins/git-it-on ## Copy git it on utilities plugin
 fi
 
-## Create codelabs & workspace directory
-mkdir codelabs
-mkdir workspace
-
 # 3. Install Homebrew
 
 if test ! $(which brew); then
   e_header "Installing Homebrew"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew bundle --file=~/.dotfiles/Brewfile
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew tap Homebrew/bundle
+  brew bundle Brewfile
 else
   e_warning "Homebrew is already installed. Skipping.."
 fi
+
 
 # 4. Install ZSH NVM
 
