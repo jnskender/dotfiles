@@ -97,8 +97,6 @@ else
   e_warning "NVM is already installed. Skipping.."
 fi
 
-
-
 ## Print installed node, npm version
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
@@ -109,19 +107,26 @@ echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa
 eval "$(ssh-agent -s)"
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
 
-## Remove cloned dotfiles from system
-if [ -d ~/dotfiles ]; then
-  sudo rm -R ~/dotfiles
-fi
-
 ## Terminal & Dock setup
-source osx/screen.sh
-source osx/dock.sh
-source osx/system.sh
-source osx/terminal.sh
+#
+echo "This script is about to run osx/screen.sh."
+  bash osx/screen.sh
+echo "This script has just run osx/screen.sh."
+#
+echo "This script is about to run osx/dock.sh."
+  bash osx/dock.sh
+echo "This script has just run osx/system.sh"
+#
+echo "This script is about to run osx/system.sh"
+  bash osx/system.sh
+echo "This script has just runosx/system.sh"
+#
+echo "This script is about to run osx/terminal.sh"
+  bash osx/terminal.sh
+echo "This script has just osx/terminal.sh"
+#
 
-e_thanks "Author: https://github.com/gokulkrishh \n"
-
+zsh
 echo "🍺  Thats all, Done. Note that some of these changes require a logout/restart to take effect."
 
 # END
