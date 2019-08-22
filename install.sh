@@ -71,7 +71,7 @@ if test ! $(which brew); then
   e_header "Installing Homebrew"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew tap Homebrew/bundle
-  brew bundle Brewfile
+  brew bundle
 else
   e_warning "Homebrew is already installed. Skipping.."
 fi
