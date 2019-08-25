@@ -17,6 +17,7 @@ brew "vim"
 brew "yarn"
 brew "zsh"
 brew "zsh-syntax-highlighting"
+brew "z"
 
 # Casks
 cask "github"
