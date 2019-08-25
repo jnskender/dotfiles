@@ -24,7 +24,7 @@ e_bold "${tan}┌─────────────────────
 # 1. Git configuration
 
 e_header "Setup git config (global)"
-cp gitignore ~/.gitignore_global  ## Adding .gitignore global
+ln -s gitignore ~/.gitignore_global  ## Adding .gitignore global
 git config --global core.excludesfile "${HOME}/.gitignore_global"
 
 ask "${blue} (Option) Enter Your Github Email: "
@@ -102,12 +102,13 @@ echo "Setting up macOS..."
   bash macOS.sh
 echo "Finished setting up macOS"
 
-## Mackup config
-ln -s mackup.cfg  ~/.npmrc
 
 ## Print installed node, npm version
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
+
+## Change default shell to zsh
+chsh -s $(which zsh)
 
 echo "Generating an RSA token for GitHub"
 ssh-keygen -t rsa -b 4096 -C "jnskender@gmail.com" ## Replace it with your email id

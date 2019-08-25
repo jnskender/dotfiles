@@ -1,5 +1,11 @@
 tap "caskroom/fonts"
-
+tap "homebrew/dupes"
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "caskroom/fonts"
+tap "caskroom/versions"
+tap "caskroom/cask"
 
 brew "exercism"
 brew "git"
