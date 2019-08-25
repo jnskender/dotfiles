@@ -96,7 +96,8 @@ if test ! $(which nvm); then
 else
   e_warning "NVM is already installed. Skipping.."
 fi
-
+##symlink iterm2 config
+ln -s iterm2/com.googlecode.iterm2.plist ~/iterm2/com.google.code.iterm2.plist
 ## macOS Setup
 echo "Setting up macOS..."
   bash macOS.sh
