@@ -60,9 +60,7 @@ else
   e_note "Check .aliases file for more details."
   ln -s oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
   ln -s oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
-  ln -s oh-my-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme   ## Copy custom dracula theme
   ln -s oh-my-zsh/z.sh ~/z.sh                                               ## Copy z.sh autocompletion file
-  git clone https://github.com/peterhurford/git-it-on.zsh ~/.oh-my-zsh/custom/plugins/git-it-on ## Copy git it on utilities plugin
 fi
 
 # 3. Install Homebrew
@@ -96,20 +94,10 @@ if test ! $(which nvm); then
 else
   e_warning "NVM is already installed. Skipping.."
 fi
-##symlink iterm2 config
-ln -s iterm2/com.googlecode.iterm2.plist ~/iterm2/com.google.code.iterm2.plist
-## macOS Setup
-echo "Setting up macOS..."
-  bash macOS.sh
-echo "Finished setting up macOS"
-
 
 ## Print installed node, npm version
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
-
-## Change default shell to zsh
-chsh -s $(which zsh)
 
 echo "Generating an RSA token for GitHub"
 ssh-keygen -t rsa -b 4096 -C "jnskender@gmail.com" ## Replace it with your email id
