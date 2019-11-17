@@ -60,7 +60,6 @@ else
   e_note "Check .aliases file for more details."
   ln -s oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
   ln -s oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
-  ln -s oh-my-zsh/z.sh ~/z.sh                                               ## Copy z.sh autocompletion file
 fi
 
 # 3. Install Homebrew
