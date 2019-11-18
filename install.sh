@@ -26,24 +26,8 @@ e_bold "${tan}┌─────────────────────
 e_header "Setup git config (global)"
 ln -sf gitignore ~/.gitignore_global  ## Adding .gitignore global
 git config --global core.excludesfile "${HOME}/.gitignore_global"
-
-ask "${blue} (Option) Enter Your Github Email: "
-read -r emailId
-if is_empty $emailId; then
-  git config --global user.email "$emailId" ## Git Email Id
-  e_success "Email is set"
-else
-  e_error "Not set"
-fi
-
-ask "${blue} (Option) Enter Your Github Username: "
-read -r userName
-if is_empty $userName; then
-  git config --global user.name "$userName" ## Git Username
-  e_success "Username is set"
-else
-  e_error "Not set"
-fi
+git config --global user.email "jnskender@gmail.com" ## Git Email Id
+git config --global user.name "jnskender" ## Git Username
 
 # 2. Install Oh-My-Zsh & custom aliases
 
