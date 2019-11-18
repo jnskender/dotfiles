@@ -16,6 +16,11 @@ git clone https://github.com/jnskender/dotfiles.git ~/dotfiles
 ```bash
 cd ~/dotfiles && bash install.sh
 ```
+
+#####  `Manual Stuff`
+- Download Sync Settings and copy gist ID into VScode
+- Sign into Firefox Sync for bookmarks
+-
 #####  `Features`
 
 - [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
