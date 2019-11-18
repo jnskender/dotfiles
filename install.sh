@@ -24,7 +24,7 @@ e_bold "${tan}┌─────────────────────
 # 1. Git configuration
 
 e_header "Setup git config (global)"
-ln -s gitignore ~/.gitignore_global  ## Adding .gitignore global
+ln -sf gitignore ~/.gitignore_global  ## Adding .gitignore global
 git config --global core.excludesfile "${HOME}/.gitignore_global"
 
 ask "${blue} (Option) Enter Your Github Email: "
@@ -58,8 +58,8 @@ else
   ## To install ZSH themes & aliases
   e_header "Copying ZSH themes & aliases..."
   e_note "Check .aliases file for more details."
-  ln -s oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
-  ln -s oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
+  ln -sf oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
+  ln -sf oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
 fi
 
 # 3. Install Homebrew
@@ -82,7 +82,7 @@ if test ! $(which nvm); then
   git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 
   ## To setup npm install/update -g without sudo
-  ln -s  npmrc ~/.npmrc
+  ln -sf  npmrc ~/.npmrc
   mkdir "${HOME}/.npm-packages"
   export PATH="$HOME/.node/bin:$PATH"
   sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
