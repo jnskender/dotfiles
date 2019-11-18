@@ -1,12 +1,8 @@
-tap "caskroom/cask"
-tap "caskroom/fonts"
-tap "caskroom/versions"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "homebrew/php"
 tap "homebrew/services"
 
 brew "git"
