@@ -11,8 +11,6 @@ brew "ruby"
 brew "sqlite"
 brew "vim"
 brew "yarn"
-brew "zsh-syntax-highlighting"
-brew "z"
 
 # Casks
 cask "github"
