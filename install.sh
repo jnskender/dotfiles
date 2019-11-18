@@ -54,7 +54,10 @@ if [ -d "$ZSH" ]; then
 else
   e_header "Installing Oh My Zsh..."
   curl -L http://install.ohmyz.sh | sh
-
+  ## install ZSH plugins
+  #Z
+  e_header "Installing ZSH Plugins"
+  git clone https://github.com/agkozak/zsh-z $ZSH/plugins/zsh-z
   ## To install ZSH themes & aliases
   e_header "Copying ZSH themes & aliases..."
   e_note "Check .aliases file for more details."
