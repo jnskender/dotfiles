@@ -33,4 +33,5 @@ cask "spotify"
 cask "balenaetcher"
 cask "zoomus"
 cask "obs"
+cask "rectangle"
 
