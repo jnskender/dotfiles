@@ -18,7 +18,8 @@ cd ~/dotfiles && bash install.sh
 ```
 
 ### Manual Steps
-* Open iTerm2 => preferences => general => preferences => choose "load preference from a custom folder or URL" => choose: /Users/jnskender/Documents/code
+* Open iTerm2 => preferences => general => preferences => choose "load preference from a custom folder or URL" => choose: ~/iterm/
+* Import Cobalt2 theme into color profile from ~/iterm/
 
 * Install Mac Store Apps
   * Logic Pro
