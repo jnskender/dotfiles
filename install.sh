@@ -95,9 +95,6 @@ echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa
 eval "$(ssh-agent -s)"
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
 
-
-
-
 echo "🍺  Thats all, Done. Note that some of these changes require a logout/restart to take effect."
 
 # END
