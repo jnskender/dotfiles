@@ -81,9 +81,9 @@ else
   e_warning "NVM is already installed. Skipping.."
 fi
 
-echo "Configuring your MacOS Settings"
-sh ./macos.bash
-echo "MacOS settings configured"
+# echo "Configuring your MacOS Settings"
+# sh ./macos.bash
+# echo "MacOS settings configured"
 
 ## Print installed node, npm version
 echo "node --version: $(node --version)"
