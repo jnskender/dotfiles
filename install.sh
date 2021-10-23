@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Welcome!!
-# Custom dotfiles to get you started with OS X machine for development.
-# Author: https://github.com/gokulkrishh
-# Source: https://github.com/gokulkrishh/dotfiles
-
 ## Custom color codes & utility functions
 source helper/utility.sh
 
