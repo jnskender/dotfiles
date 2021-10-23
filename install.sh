@@ -71,7 +71,7 @@ if test ! $(which nvm); then
 
   ## Set npm global config
   npm config set init.author.name "John Skender" ## Replace it with your name
-  npm config set init.author.email "jnskender@gmail.com" ## Replace it with your email id
+  npm config set init.author.email "john@johnskender.com" ## Replace it with your email id
 else
   e_warning "NVM is already installed. Skipping.."
 fi
