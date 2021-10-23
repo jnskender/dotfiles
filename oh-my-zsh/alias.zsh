@@ -66,7 +66,6 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles true; killall Finder"
 alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles false; killall Finder"
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ## Delete & Cleanup
 alias rm="=rm -rf"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
@@ -76,6 +75,11 @@ alias ip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0
 
 ## Capture Screenshot
 alias sca="screencapture -c -W -P"
+
+# Reload shell
+alias reload="source ~/.zshrc"
+alias reload_shell="source ~/.zshrc"
+
 
 # 4. OS X Utilities
 
