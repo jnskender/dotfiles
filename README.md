@@ -28,7 +28,6 @@ cd ~/dotfiles && bash install.sh
 ###  Features
 
 - [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
-- [`Shortcuts & Aliases`](./docs/Aliases.md)
 - [`Homebrew`](http://brew.sh/)
 - [`ZSH NVM`](https://github.com/lukechilds/zsh-nvm)
 - [`Yarn`](https://yarnpkg.com/)
