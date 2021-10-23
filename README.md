@@ -17,10 +17,13 @@ git clone https://github.com/jnskender/dotfiles.git ~/dotfiles
 cd ~/dotfiles && bash install.sh
 ```
 
-#####  `Manual Stuff`
-- Download Sync Settings and copy gist ID into VScode
-- Sign into Firefox Sync for bookmarks
--
+##### `Manual Steps`
+* Open iTerm2 => preferences => general => preferences => choose "load preference from a custom folder or URL" => choose: /Users/jnskender/Documents/code
+
+* Install Mac Store Apps
+  * Logic Pro
+  * Final Cut
+
 #####  `Features`
 
 - [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
