@@ -82,7 +82,7 @@ else
 fi
 
 # echo "Configuring your MacOS Settings"
-# sh ./macos.bash
+# sh ./mac/macos.bash
 # echo "MacOS settings configured"
 
 ## Print installed node, npm version
