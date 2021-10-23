@@ -16,6 +16,10 @@ Desktop.ini
 ._*
 Thumbs.db
 
+#Node and npm
+/node_modules
+/Node_Modules
+
 ## Files that might appear on external disks
 .Spotlight-V100
 .Trashes
