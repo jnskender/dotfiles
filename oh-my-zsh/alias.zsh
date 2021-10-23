@@ -58,6 +58,11 @@ alias f="open -a Finder"
 alias la="alias | sed 's/=.*//'"
 alias lsd='ls -l | grep "^d"' # only directories
 alias fs="stat -f \"%z bytes\"" # File size
+alias lsh="ls -a" #show hidden files
+
+#Show and hide hidden files in finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles true; killall Finder"
 alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles false; killall Finder"
 
@@ -92,9 +97,6 @@ alias l='ls -l ${colorflag}'
 ## Lock screen while going AFK
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-## Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # 5. Web Development
 
