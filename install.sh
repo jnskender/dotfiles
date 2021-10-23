@@ -81,6 +81,10 @@ else
   e_warning "NVM is already installed. Skipping.."
 fi
 
+echo "Configuring your MacOS Settings"
+sh ./macos.bash
+echo "MacOS settings configured"
+
 ## Print installed node, npm version
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
@@ -90,6 +94,9 @@ ssh-keygen -t rsa -b 4096 -C "jnskender@gmail.com" ## Replace it with your email
 echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
 eval "$(ssh-agent -s)"
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
+
+
+
 
 echo "🍺  Thats all, Done. Note that some of these changes require a logout/restart to take effect."
 
