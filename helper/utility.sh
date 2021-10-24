@@ -90,4 +90,12 @@ link() {
   ln -s "$from" "$to"
 }
 
+link() {
+  from="$1"
+  to="$2"
+  echo "Linking '${HOME}/Dotfiles/$from' to '$to'"
+  rm -f "$to"
+  ln -s "$from" "$to"
+}
+
 ## END
