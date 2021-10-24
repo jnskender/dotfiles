@@ -7,18 +7,18 @@ tap "homebrew/services"
 
 brew "git"
 brew "python"
-#brew "ruby"
+brew "ruby"
 brew "sqlite"
 brew "vim"
 brew "yarn"
+brew 'nvm'
 
 # Casks
 cask "github"
 cask "obsidian"
 cask "mongodb-compass"
 cask "raycast"
-# cask "1password"
-cask "1password-beta"
+cask "1password"
 # cask "alfred"
 # cask "backblaze"
 # cask "caffeine"
