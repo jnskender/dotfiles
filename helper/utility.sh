@@ -17,29 +17,27 @@ blue=$(tput setaf 38)
 
 ## To check input is empty or not
 is_empty() {
-if [ $# -eq  0 ]
-  then
+  if [ $# -eq 0 ]; then
     return 1
-fi
+  fi
   return 0
 }
 
 ## To check programs exit or not
 is_exists() {
-if [ $(type -P $1) ]; then
-  return 1
-fi
+  if [ $(type -P $1) ]; then
+    return 1
+  fi
   return 0
 }
 
 ## To check file exits or not
 is_file_exists() {
-if [ -f "$file" ]
-then
-	return 1
-else
-	return 0
-fi
+  if [ -f "$file" ]; then
+    return 1
+  else
+    return 0
+  fi
 }
 
 # Custom echo functions
@@ -82,6 +80,14 @@ e_bold() {
 
 e_note() {
   printf "\n${underline}${bold}${blue}Note:${reset} ${blue}%s${reset}\n" "$@"
+}
+
+link() {
+  from="$1"
+  to="$2"
+  echo "Linking '$from' to '$to'"
+  rm -f "$to"
+  ln -s "$from" "$to"
 }
 
 ## END
