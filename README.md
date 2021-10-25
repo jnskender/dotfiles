@@ -5,14 +5,8 @@
 - Type ````git```` in the default terminal. You'll then be prompted to install xCode CLI tools which includes git
 
 ###  Installation
-1. Clone
 ```bash
 curl -L https://raw.githubusercontent.com/jnskender/dotfiles/master/install.sh | sh
-```
-2. Install
-
-```bash
-cd ~/dotfiles && bash install.sh
 ```
 
 ### Manual Steps
