@@ -1,20 +1,12 @@
 # John Skender's Dotfiles
 
-## ✨ Steps
-
 ### Pre-Setup
 - Set username to jnskender
 - Type ````git```` in the default terminal. You'll then be prompted to install xCode CLI tools which includes git
 
 ###  Installation
-1. Clone
 ```bash
-git clone https://github.com/jnskender/dotfiles.git ~/dotfiles
-```
-2. Install
-
-```bash
-cd ~/dotfiles && bash install.sh
+curl -L https://raw.githubusercontent.com/jnskender/dotfiles/master/install.sh | sh
 ```
 
 ### Manual Steps
